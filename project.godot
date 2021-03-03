@@ -1,0 +1,112 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "TileSet",
+"class": "AnnotatedTileSet",
+"language": "GDScript",
+"path": "res://AnnotatedTileSet.gd"
+}, {
+"base": "ImageTexture",
+"class": "CustomGradientTexture",
+"language": "GDScript",
+"path": "res://addons/maujoe.custom_gradient_texture/custom_gradient_texture.gd"
+}, {
+"base": "",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://git_api.gdns"
+}, {
+"base": "Node2D",
+"class": "Level",
+"language": "GDScript",
+"path": "res://Level.gd"
+}, {
+"base": "Reference",
+"class": "ShadowCaster",
+"language": "GDScript",
+"path": "res://ShadowCaster.gd"
+}, {
+"base": "TileMap",
+"class": "Terrain",
+"language": "GDScript",
+"path": "res://Terrain.gd"
+}, {
+"base": "Node2D",
+"class": "VisibilityTester",
+"language": "GDScript",
+"path": "res://test/unit/shadow_caster/resources/VisibilityTester.gd"
+} ]
+_global_script_class_icons={
+"AnnotatedTileSet": "",
+"CustomGradientTexture": "",
+"GitAPI": "",
+"Level": "",
+"ShadowCaster": "",
+"Terrain": "",
+"VisibilityTester": ""
+}
+
+[application]
+
+config/name="visibility"
+run/main_scene="res://FieldOfView.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Events="*res://Events.gd"
+
+[display]
+
+window/size/width=384
+window/size/height=216
+window/size/test_width=1152
+window/size/test_height=648
+window/dpi/allow_hidpi=true
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "gut" )
+
+[gdnative]
+
+singletons=[ "res://git_api.gdnlib" ]
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+
+[rendering]
+
+quality/2d/use_pixel_snap=true
+environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=false

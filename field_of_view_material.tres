@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://fov_composite.shader" type="Shader" id=1]
+
+[sub_resource type="ViewportTexture" id=1]
+viewport_path = NodePath("FogViewport")
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/visible_old_transform = null
+shader_param/visible_new_transform = null
+shader_param/seen_transform = null
+shader_param/move_progress = null
+shader_param/fog_of_war = SubResource( 1 )
